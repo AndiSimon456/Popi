@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cek Tarif - Tiki</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Cek Tarif Pengiriman</h1>
+
+      <!-- Form Cek Tarif -->
+      <div class="form-section">
+        <form>
+          <div class="form-group">
+            <label for="origin">Asal Pengiriman:</label>
+            <input
+              type="text"
+              id="origin"
+              class="form-control"
+              placeholder="Masukkan kota asal"
+            />
+          </div>
+          <div class="form-group">
+            <label for="destination">Tujuan Pengiriman:</label>
+            <input
+              type="text"
+              id="destination"
+              class="form-control"
+              placeholder="Masukkan kota tujuan"
+            />
+          </div>
+          <div class="form-group">
+            <label for="weight">Berat Barang (kg):</label>
+            <input
+              type="number"
+              id="weight"
+              class="form-control"
+              placeholder="Masukkan berat barang"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="calculateTariff()"
+          >
+            Cek Tarif
+          </button>
+        </form>
+      </div>
+
+      <!-- Tabel Hasil Tarif -->
+      <div class="result-section mt-5">
+        <h2 class="text-center mb-4">Hasil Tarif Pengiriman</h2>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Asal Pengiriman</th>
+              <th>Tujuan Pengiriman</th>
+              <th>Berat Barang (kg)</th>
+              <th>Tarif (Rp)</th>
+            </tr>
+          </thead>
+          <tbody id="resultTable">
+            <!-- Contoh data hasil, ini dapat diperbarui sesuai dengan hasil cek tarif -->
+            <tr>
+              <td>1</td>
+              <td>Jakarta</td>
+              <td>Bandung</td>
+              <td>2</td>
+              <td>30,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      function calculateTariff() {
+        // Implementasikan logika perhitungan tarif di sini
+        // Contoh: Menambahkan baris hasil secara dinamis ke tabel
+
+        // Mendapatkan nilai input dari formulir
+        var origin = document.getElementById("origin").value;
+        var destination = document.getElementById("destination").value;
+        var weight = document.getElementById("weight").value;
+
+        // Contoh perhitungan tarif sederhana
+        var tariff = weight * 15000; // Misalkan tarif per kg adalah Rp 15,000
+
+        // Menambahkan hasil ke tabel
+        var resultTable = document.getElementById("resultTable");
+        var row = resultTable.insertRow();
+        row.insertCell(0).innerHTML = resultTable.rows.length;
+        row.insertCell(1).innerHTML = origin;
+        row.insertCell(2).innerHTML = destination;
+        row.insertCell(3).innerHTML = weight;
+        row.insertCell(4).innerHTML = tariff.toLocaleString("id-ID");
+      }
+    </script>
+  </body>
+</html>

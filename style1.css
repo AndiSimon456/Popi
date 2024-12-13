@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  width: 300px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+header h1 {
+  font-size: 1.5em;
+}
+
+.navbar {
+  background-color: #343a40;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.navbar a:hover {
+  background-color: #495057;
+}
+
+.content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.col {
+  flex: 1;
+  padding: 10px;
+  min-width: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+.hero-text {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+  height: 30rem;
+  text-align: center;
+}
+.form-section {
+  background: #f4f4f4;
+  padding: 40px 0;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.table {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+table form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+table input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+table button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.mitra-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.kotak a {
+  text-decoration: none;
+  color: black;
+}
+/* bagian Layanan */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card {
+  margin-bottom: 20px;
+  gap: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+/* Bagian Kontak */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.input-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.table {
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.table th {
+  background-color: #f4f4f4;
+}
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #0056b3;
+}
+/* bagian Tarif */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-section {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #0056b3;
+}
+.table {
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.table th {
+  background-color: #f4f4f4;
+}

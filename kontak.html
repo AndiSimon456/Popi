@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak Cabang Tiki</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Kontak Cabang Tiki</h1>
+
+      <!-- Form Pencarian -->
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="searchInput"
+          placeholder="Cari berdasarkan Kota/Kabupaten"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          onclick="searchTable()"
+        >
+          Cari
+        </button>
+      </div>
+
+      <!-- Tabel Kontak Cabang -->
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Kota/Kabupaten</th>
+            <th>Nomor Telepon</th>
+            <th>Alamat</th>
+          </tr>
+        </thead>
+        <tbody id="dataTable">
+          <tr>
+            <td>1</td>
+            <td>Jakarta</td>
+            <td>021-1234567</td>
+            <td>Jl. Merdeka No. 1, Jakarta</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bandung</td>
+            <td>022-2345678</td>
+            <td>Jl. Asia Afrika No. 2, Bandung</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Surabaya</td>
+            <td>031-3456789</td>
+            <td>Jl. Tunjungan No. 3, Surabaya</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Medan</td>
+            <td>061-4567890</td>
+            <td>Jl. Gatot Subroto No. 4, Medan</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Makassar</td>
+            <td>0411-5678901</td>
+            <td>Jl. Pettarani No. 5, Makassar</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      function searchTable() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("dataTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[1]; // Kolom Kota/Kabupaten
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
